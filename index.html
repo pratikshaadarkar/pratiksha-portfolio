@@ -381,70 +381,103 @@
 </div>
 
 <!-- ── Client Reviews ─────────────────────────────────────────── -->
-<section id="reviews">
-  <div class="reviews-inner">
-    <div class="reviews-left">
-      <p class="section-eyebrow">Testimonials</p>
-      <h2 class="section-title">Our Client<br><em>Reviews</em></h2>
-    </div>
-    <div class="reviews-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: center; position: relative;">
-      <!-- Video Testimonial (Fixed) -->
-      <div class="review-card" style="display: flex; flex-direction: column; gap: 12px;">
-        <div class="review-logo"><span class="mark">◈</span> S J Capital Financial Services</div>
-        <div style="padding:100% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1216681480?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Jignesh Parmar Testimonial"></iframe></div>
-        <div class="review-author">
-          <div class="review-author-name">Jignesh Parmar</div>
-          <div class="review-author-title">Owner, S J Capital Financial Services</div>
-        </div>
+<section id="reviews" style="padding: 80px 40px; background: var(--bg);">
+  <div style="max-width: 1000px; margin: 0 auto;">
+
+    <!-- Header Row -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
+      <div>
+        <p style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px;">Testimonials</p>
+        <h2 style="font-size: clamp(28px, 4vw, 40px); font-weight: 700; margin: 0; line-height: 1.2; color: var(--fg);">Our Client <em>Reviews</em></h2>
       </div>
-
-      <!-- Written Testimonial (Rotating) -->
-      <div style="position: relative;">
-        <div class="review-card active-written" style="display: block;">
-          <div class="review-logo"><span class="mark">◈</span> Eureka Moment</div>
-          <p class="review-text">"I had an amazing experience with Pratiksha at Eureka Moment! Her editing skills and expertise add great value to our work. She is a reliable team member, always quick to help, with fantastic attention to detail making our projects much better. Pratiksha is professional, committed, and her insights truly add great value to any team! I highly recommend her and wish her all the best!"</p>
-          <div class="review-author">
-            <div class="review-author-name">Adnyesh</div>
-            <div class="review-author-title">Owner, Eureka Moment</div>
-          </div>
-        </div>
-        <div class="review-card" style="display: none;">
-          <div class="review-logo"><span class="mark">◈</span> 5 Diget Studios</div>
-          <p class="review-text">"Excellent video social media reels edit."</p>
-          <div class="review-author">
-            <div class="review-author-name">Santosh Gaikar</div>
-            <div class="review-author-title">Owner, 5 Diget Studios</div>
-          </div>
-        </div>
-
-        <!-- Navigation Arrows -->
-        <button class="review-prev" style="position: absolute; left: -50px; top: 50%; transform: translateY(-50%); background: none; border: none; color: #F0F0F0; font-size: 28px; cursor: pointer; padding: 10px; z-index: 10;">←</button>
-        <button class="review-next" style="position: absolute; right: -50px; top: 50%; transform: translateY(-50%); background: none; border: none; color: #F0F0F0; font-size: 28px; cursor: pointer; padding: 10px; z-index: 10;">→</button>
+      <div style="display: flex; gap: 10px;">
+        <button id="review-prev" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border); background: var(--card-bg); color: var(--fg); font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center;">←</button>
+        <button id="review-next" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border); background: var(--card-bg); color: var(--fg); font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center;">→</button>
       </div>
     </div>
+
+    <!-- Carousel -->
+    <div style="overflow: hidden;">
+      <div id="reviews-track" style="display: flex; transition: transform 0.45s cubic-bezier(0.4,0,0.2,1);">
+
+        <!-- Slide 1: Video Testimonial -->
+        <div style="min-width: 100%; box-sizing: border-box;">
+          <div style="display: flex; gap: 40px; align-items: flex-start; background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 36px; overflow: hidden;">
+            <div style="flex: 0 0 380px; max-width: 380px;">
+              <div style="position: relative; width: 100%; padding-top: 177.78%; border-radius: 10px; overflow: hidden; background: #000;">
+                <iframe src="https://player.vimeo.com/video/1216681480?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:10px;" title="Jignesh Parmar Testimonial"></iframe>
+              </div>
+            </div>
+            <div style="flex: 1; padding-top: 8px; display: flex; flex-direction: column; justify-content: center; min-height: 300px;">
+              <p style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0 0 20px;">S J Capital Financial Services</p>
+              <p style="font-size: 18px; line-height: 1.65; color: var(--fg); margin: 0 0 32px; font-style: italic;">"Watch to hear what Jignesh has to say about his experience working with us — straight from the client."</p>
+              <div style="border-top: 1px solid var(--border); padding-top: 20px; margin-top: auto;">
+                <div style="font-size: 15px; font-weight: 600; color: var(--fg);">Jignesh Parmar</div>
+                <div style="font-size: 13px; color: var(--muted); margin-top: 4px;">Owner, S J Capital Financial Services</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2: Eureka Moment -->
+        <div style="min-width: 100%; box-sizing: border-box;">
+          <div style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 52px 56px;">
+            <p style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0 0 28px;">Eureka Moment</p>
+            <p style="font-size: 22px; line-height: 1.7; color: var(--fg); margin: 0 0 40px; font-style: italic;">"I had an amazing experience with Pratiksha at Eureka Moment! Her editing skills and expertise add great value to our work. She is a reliable team member, always quick to help, with fantastic attention to detail making our projects much better. Pratiksha is professional, committed, and her insights truly add great value to any team! I highly recommend her."</p>
+            <div style="border-top: 1px solid var(--border); padding-top: 24px;">
+              <div style="font-size: 15px; font-weight: 600; color: var(--fg);">Adnyesh</div>
+              <div style="font-size: 13px; color: var(--muted); margin-top: 4px;">Owner, Eureka Moment</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3: 5 Digit Studios -->
+        <div style="min-width: 100%; box-sizing: border-box;">
+          <div style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 52px 56px;">
+            <p style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0 0 28px;">5 Digit Studios</p>
+            <p style="font-size: 22px; line-height: 1.7; color: var(--fg); margin: 0 0 40px; font-style: italic;">"Excellent video social media reels editing. Very professional work and quick turnaround. Highly recommended."</p>
+            <div style="border-top: 1px solid var(--border); padding-top: 24px;">
+              <div style="font-size: 15px; font-weight: 600; color: var(--fg);">Santosh Gaikar</div>
+              <div style="font-size: 13px; color: var(--muted); margin-top: 4px;">Owner, 5 Digit Studios</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Dot Indicators -->
+    <div style="display: flex; justify-content: center; gap: 8px; margin-top: 28px;">
+      <span class="rdot" data-i="0" style="width: 24px; height: 7px; border-radius: 4px; background: var(--fg); cursor: pointer; transition: all 0.25s; display: inline-block;"></span>
+      <span class="rdot" data-i="1" style="width: 7px; height: 7px; border-radius: 50%; background: var(--muted); cursor: pointer; transition: all 0.25s; display: inline-block;"></span>
+      <span class="rdot" data-i="2" style="width: 7px; height: 7px; border-radius: 50%; background: var(--muted); cursor: pointer; transition: all 0.25s; display: inline-block;"></span>
+    </div>
+
   </div>
 </section>
 
 <script>
-let currentWrittenReview = 0;
-const writtenReviews = document.querySelectorAll('.review-card:not(:first-child)');
-const totalWrittenReviews = writtenReviews.length;
+(function() {
+  var cur = 0, total = 3;
+  var track = document.getElementById('reviews-track');
+  var dots = document.querySelectorAll('.rdot');
 
-function showWrittenReview(index) {
-  writtenReviews.forEach((r, i) => {
-    r.style.display = i === index ? 'block' : 'none';
-  });
-}
+  function goTo(n) {
+    cur = (n + total) % total;
+    track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+    dots.forEach(function(d, i) {
+      if (i === cur) {
+        d.style.width = '24px'; d.style.borderRadius = '4px'; d.style.background = 'var(--fg)';
+      } else {
+        d.style.width = '7px'; d.style.borderRadius = '50%'; d.style.background = 'var(--muted)';
+      }
+    });
+  }
 
-document.querySelector('.review-prev').addEventListener('click', () => {
-  currentWrittenReview = (currentWrittenReview - 1 + totalWrittenReviews) % totalWrittenReviews;
-  showWrittenReview(currentWrittenReview);
-});
-
-document.querySelector('.review-next').addEventListener('click', () => {
-  currentWrittenReview = (currentWrittenReview + 1) % totalWrittenReviews;
-  showWrittenReview(currentWrittenReview);
-});
+  document.getElementById('review-prev').addEventListener('click', function() { goTo(cur - 1); });
+  document.getElementById('review-next').addEventListener('click', function() { goTo(cur + 1); });
+  dots.forEach(function(d) { d.addEventListener('click', function() { goTo(+d.dataset.i); }); });
+})();
 </script>
 <script async src="https://www.instagram.com/embed.js"></script>
 
