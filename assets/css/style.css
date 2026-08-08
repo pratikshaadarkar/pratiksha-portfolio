@@ -736,7 +736,6 @@ h1 em { font-style: italic; font-family: Georgia, "Times New Roman", serif; }
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 48px;
-    margin-left: 40px;
     transition: color 0.2s;
   }
 .back-link:hover { color: var(--fg); }
@@ -1127,9 +1126,8 @@ h1 em { font-style: italic; font-family: Georgia, "Times New Roman", serif; }
   .gallery-item:nth-child(3) { background: var(--card-bg); }
 /* Services Section */
   .services-section {
-    margin-top: 80px;
-    padding-top: 80px;
-    border-top: 1px solid var(--border);
+    margin-top: 0;
+    padding-top: 0;
   }
 .services-section h2 {
     font-size: 32px;
