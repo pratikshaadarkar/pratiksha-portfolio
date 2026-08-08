@@ -387,24 +387,8 @@
       <p class="section-eyebrow">Testimonials</p>
       <h2 class="section-title">Our Client<br><em>Reviews</em></h2>
     </div>
-    <div class="reviews-grid">
-      <div class="review-card">
-        <div class="review-logo"><span class="mark">◈</span> Eureka Moment</div>
-        <p class="review-text">"I had an amazing experience with Pratiksha at Eureka Moment! Her editing skills and expertise add great value to our work. She is a reliable team member, always quick to help, with fantastic attention to detail making our projects much better. Pratiksha is professional, committed, and her insights truly add great value to any team! I highly recommend her and wish her all the best!"</p>
-        <div class="review-author">
-          <div class="review-author-name">Adnyesh</div>
-          <div class="review-author-title">Owner, Eureka Moment</div>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="review-logo"><span class="mark">◈</span> 5 Diget Studios</div>
-        <p class="review-text">"Excellent video social media reels edit."</p>
-        <div class="review-author">
-          <div class="review-author-name">Santosh Gaikar</div>
-          <div class="review-author-title">Owner, 5 Diget Studios</div>
-        </div>
-      </div>
-      <div class="review-card">
+    <div class="reviews-carousel" style="position: relative;">
+      <div class="review-card active" style="display: block;">
         <div class="review-logo"><span class="mark">◈</span> S J Capital Financial Services</div>
         <div style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1216681480?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Jignesh Parmar Testimonial"></iframe></div>
         <div class="review-author">
@@ -412,9 +396,48 @@
           <div class="review-author-title">Owner, S J Capital Financial Services</div>
         </div>
       </div>
+      <div class="review-card" style="display: none;">
+        <div class="review-logo"><span class="mark">◈</span> Eureka Moment</div>
+        <p class="review-text">"I had an amazing experience with Pratiksha at Eureka Moment! Her editing skills and expertise add great value to our work. She is a reliable team member, always quick to help, with fantastic attention to detail making our projects much better. Pratiksha is professional, committed, and her insights truly add great value to any team! I highly recommend her and wish her all the best!"</p>
+        <div class="review-author">
+          <div class="review-author-name">Adnyesh</div>
+          <div class="review-author-title">Owner, Eureka Moment</div>
+        </div>
+      </div>
+      <div class="review-card" style="display: none;">
+        <div class="review-logo"><span class="mark">◈</span> 5 Diget Studios</div>
+        <p class="review-text">"Excellent video social media reels edit."</p>
+        <div class="review-author">
+          <div class="review-author-name">Santosh Gaikar</div>
+          <div class="review-author-title">Owner, 5 Diget Studios</div>
+        </div>
+      </div>
+      <button class="review-nav review-prev" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); background: none; border: none; color: #F0F0F0; font-size: 32px; cursor: pointer; padding: 10px; z-index: 10;">←</button>
+      <button class="review-next" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); background: none; border: none; color: #F0F0F0; font-size: 32px; cursor: pointer; padding: 10px; z-index: 10;">→</button>
     </div>
   </div>
 </section>
+
+<script>
+let currentReview = 0;
+const reviews = document.querySelectorAll('.reviews-carousel .review-card');
+const totalReviews = reviews.length;
+
+function showReview(index) {
+  reviews.forEach(r => r.style.display = 'none');
+  reviews[index].style.display = 'block';
+}
+
+document.querySelector('.review-prev').addEventListener('click', () => {
+  currentReview = (currentReview - 1 + totalReviews) % totalReviews;
+  showReview(currentReview);
+});
+
+document.querySelector('.review-next').addEventListener('click', () => {
+  currentReview = (currentReview + 1) % totalReviews;
+  showReview(currentReview);
+});
+</script>
 <script async src="https://www.instagram.com/embed.js"></script>
 
 <!-- Video Modal -->
