@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/script.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BeKaizent - Cold Lead Generation</title>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo"><img src="assets/images/logo.png" alt="BeKaizent" style="height: 75px; width: auto; margin-top: 20px; margin-bottom: 8px;"></a>
+  <ul style="list-style: none;" class="nav-links"></ul>
+</nav>
+
+<div class="content">
+  <a href="/" class="back-link">← Back to Projects</a>
+
+  <h1>AI-Powered Cold <em>Lead Generation</em></h1>
+
+  <div class="meta">
+    <span>AI Systems, 2026</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <h2>Project <em>Overview</em></h2>
+    <p>Most cold outreach fails because it is generic and sent to the wrong people. I built an automated pipeline that finds two types of high-intent leads: businesses that have no website at all, and businesses that have a website but clearly need a revamp.</p>
+    <p>Using Apify to scrape Google Maps and Apollo to find businesses with weak online presence, the system collects contact details, generates personalised emails for each lead, and sends the outreach. The entire process runs in under 8 hours from zero to inbox.</p>
+  </div>
+
+  <div class="section">
+    <h2>The <em>Problem</em></h2>
+    <ul style="list-style: none;">
+      <li>Manual lead research takes hours and still produces low-quality lists</li>
+      <li>Generic emails get ignored because they do not speak to the specific business</li>
+      <li>No consistent way to identify businesses that actually need the service</li>
+      <li>Following up with hundreds of leads individually is not scalable</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>How the <em>Pipeline Works</em></h2>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <span class="step-num">01</span>
+        <div class="step-content">
+          <h4>Select target niches</h4>
+          <p>Choose specific business categories and locations to focus on, such as local service businesses, clinics, or retail shops in a given city.</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <span class="step-num">02</span>
+        <div class="step-content">
+          <h4>Scrape Google Maps with Apify</h4>
+          <p>Apify runs a Google Maps scrape for the selected niches and pulls business names, phone numbers, addresses, and whether a website is listed or not.</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <span class="step-num">03</span>
+        <div class="step-content">
+          <h4>Find revamp-ready leads via Apollo</h4>
+          <p>Apollo searches for businesses in the same niches that do have websites but whose online presence is outdated, slow, or missing basic information.</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <span class="step-num">04</span>
+        <div class="step-content">
+          <h4>Collect and qualify contact details</h4>
+          <p>Both lists are merged and cleaned. Duplicate entries are removed, and contact details such as emails and phone numbers are validated and enriched.</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <span class="step-num">05</span>
+        <div class="step-content">
+          <h4>Generate personalised outreach emails</h4>
+          <p>AI generates a unique email for each lead referencing the business by name, mentioning the specific gap (no website or weak one), and proposing a clear solution.</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <span class="step-num">06</span>
+        <div class="step-content">
+          <h4>Send campaigns within 8 hours</h4>
+          <p>Emails are sent through the outreach tool with follow-up sequences. The entire cycle from niche selection to first email sent runs in under 8 hours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Tools <em>Used</em></h2>
+    <ul style="list-style: none;">
+      <li>Apify (Google Maps scraper)</li>
+      <li>Apollo (lead search and enrichment)</li>
+      <li>Claude AI (personalised email generation)</li>
+      <li>Email outreach tool with follow-up sequences</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>The <em>Result</em></h2>
+    <p>Qualified lead lists built and outreach sent in under 8 hours with no manual research. Every email speaks directly to the business and their specific gap, which improves open and reply rates compared to generic cold outreach.</p>
+    <div style="margin-top: 32px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden;">
+      <img src="assets/images/leadgen-result.png" alt="Lead generation result" style="width: 100%; display: block;">
+    </div>
+  </div>
+
+</div>
+
+<div id="contact">
+  <div class="cta-section">
+    <div style="width: 100%; text-align: center; background: #F5F5F5; border-radius: 20px; padding: 80px 60px; margin: 0 auto; max-width: 800px;">
+      <h2 class="cta-title" style="color: #0C0C0C;">Ready to build<br>your next <em>big idea?</em></h2>
+      <div class="social-links">
+        <a href="mailto:pratiksha@bekaizent.com" class="social-link" title="Email" style="color: #0C0C0C;">
+          <svg viewBox="0 0 24 24" style="width:28px;height:28px;"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/pratiksha-adarkar" class="social-link" title="LinkedIn" style="color: #0C0C0C;">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
